@@ -1,0 +1,49 @@
+[Master Flow] Running end-to-end simulation...
+2025-04-18 18:35:29,165 [INFO] Running GiveRouterAgent...
+2025-04-18 18:35:29,169 [INFO] [RouterAgent] - Passing state forward: {'tokens': 20, 'vendor_id': 'vendor_456'}
+2025-04-18 18:35:29,169 [INFO] [RouterAgent] - Deciding next action based on tokens: 20
+2025-04-18 18:35:29,170 [INFO] [RouterAgent] - Threshold met. Routing to trigger_transfer.
+2025-04-18 18:35:29,172 [INFO] [RouterAgent] Initiating token transfer: 20 tokens → vendor vendor_456
+2025-04-18 18:35:29,172 [INFO] [RouterAgent] Transfer successful.
+2025-04-18 18:35:29,176 [INFO] [RouterAgent] - Passing state forward: {'tokens': 20, 'vendor_id': 'vendor_456'}
+2025-04-18 18:35:29,179 [INFO] [RouterAgent] - Deciding next action based on tokens: 20
+2025-04-18 18:35:29,181 [INFO] [RouterAgent] - Threshold met. Routing to trigger_transfer.
+2025-04-18 18:35:29,184 [INFO] [RouterAgent] Initiating token transfer: 20 tokens → vendor vendor_456
+2025-04-18 18:35:29,184 [INFO] [RouterAgent] Transfer successful.
+2025-04-18 18:35:29,187 [INFO] [PhotoValidatorAgent] - Running PhotoValidatorAgent...
+2025-04-18 18:35:30,520 [INFO] [PhotoValidatorAgent] - Calling model with messages
+2025-04-18 18:35:30,918 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:35:30,929 [WARNING] No score found in model output.
+2025-04-18 18:35:30,930 [INFO] [PhotoValidatorAgent] - Checking for tool calls in message
+2025-04-18 18:35:32,333 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:35:32,335 [INFO] [PhotoValidatorAgent] - Calling model with messages
+2025-04-18 18:35:32,836 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-04-18 18:35:32,838 [INFO] [PhotoValidatorAgent] - Checking for tool calls in message
+2025-04-18 18:35:32,839 [INFO] [PhotoValidatorAgent] - Score: 0.8
+2025-04-18 18:35:32,839 [INFO] [PhotoValidatorAgent] - Result: True
+2025-04-18 18:35:32,845 [INFO] [VaultDecider] Running VaultDeciderAgent...
+2025-04-18 18:35:32,846 [INFO] [VaultDecider] Checking token balance: 20
+2025-04-18 18:35:32,847 [INFO] [VaultDecider] Vendor APY: 12.5%
+2025-04-18 18:35:32,848 [INFO] [VaultDecider] Staking 20 tokens with vendor vendor_456.
+2025-04-18 18:35:32,854 [INFO] [RewardAgent] - Running RewardAgent...
+2025-04-18 18:35:32,857 [INFO] [RewardAgent] - Checking eligibility for viewer 'user_123' with 22 gives
+2025-04-18 18:35:32,859 [INFO] [RewardAgent] - Assigning 'robux' for 20 gives
+2025-04-18 18:35:32,861 [INFO] [RewardAgent] - Dispatching 'robux' to viewer 'user_123'
+
++++++++++++++++++ Master Flow Simulation Ended +++++++++++++++++
+
+Result:-
+
+ {'tokens': 20, 
+ 'vendor_id': 'vendor_456', 
+ 'status': 'transferred', 
+ 'score': 0.8, 
+ 'validation_result': True, 
+ 'action': 'staked', 
+ 'selected_vault': 'vendor_456',
+ 'viewer_id': 'user_123', 
+ 'verified_gives': 22, 
+ 'reward_type': 'robux', 
+ 'reward_status': 'delivered', 
+ 'photo_path': './images/sharing.jpg'
+ }

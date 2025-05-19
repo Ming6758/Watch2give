@@ -1,0 +1,15 @@
+{
+    "tokens": 20,
+    "vendor_id": "vendor_456",
+    "vendor_apy": 12.5,
+    "status": "transferred",
+    "score": 0.0,
+    "validation_result": false,
+    "action": "staked",
+    "selected_vault": "vendor_456",
+    "viewer_id": "user_123",
+    "verified_gives": 22,
+    "reward_type": "robux",
+    "reward_status": "delivered",
+    "photo_path": "./images/sharing.jpg"
+}
